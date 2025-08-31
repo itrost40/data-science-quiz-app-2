@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Math Quiz Design System - Academic Theme */
+
+@layer base {
+  :root {
+    /* Background & Surface */
+    --background: 220 20% 98%;
+    --foreground: 220 15% 15%;
+    --surface: 220 20% 100%;
+    --surface-variant: 220 15% 96%;
+
+    /* Academic Primary - Deep Blue */
+    --primary: 220 80% 45%;
+    --primary-foreground: 220 20% 98%;
+    --primary-glow: 220 85% 65%;
+    
+    /* Mathematical Secondary - Purple */
+    --secondary: 260 60% 50%;
+    --secondary-foreground: 220 20% 98%;
+    
+    /* Success & Error States */
+    --success: 142 76% 36%;
+    --success-foreground: 142 76% 95%;
+    --success-glow: 142 76% 55%;
+    
+    --error: 0 84% 60%;
+    --error-foreground: 0 84% 95%;
+    --error-glow: 0 84% 75%;
+    
+    /* Graph Colors */
+    --graph-grid: 220 15% 85%;
+    --graph-axis: 220 25% 25%;
+    --graph-line: 220 80% 45%;
+    --graph-point: 260 60% 50%;
+    
+    /* Neutral Tones */
+    --muted: 220 15% 92%;
+    --muted-foreground: 220 10% 45%;
+    --border: 220 15% 88%;
+    --input: 220 20% 100%;
+    --ring: 220 80% 45%;
+    
+    /* Cards & Popovers */
+    --card: 220 20% 100%;
+    --card-foreground: 220 15% 15%;
+    --popover: 220 20% 100%;
+    --popover-foreground: 220 15% 15%;
+    
+    /* Interactive Elements */
+    --accent: 220 15% 94%;
+    --accent-foreground: 220 15% 15%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 84% 95%;
+
+    /* Design Tokens */
+    --radius: 12px;
+    --shadow-quiz: 0 4px 20px -2px hsl(220 80% 45% / 0.1);
+    --shadow-card: 0 2px 12px -1px hsl(220 15% 15% / 0.08);
+    --shadow-graph: 0 8px 32px -4px hsl(220 80% 45% / 0.15);
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(220 80% 45%), hsl(220 85% 65%));
+    --gradient-success: linear-gradient(135deg, hsl(142 76% 36%), hsl(142 76% 55%));
+    --gradient-surface: linear-gradient(180deg, hsl(220 20% 100%), hsl(220 15% 97%));
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+  
+  .math-equation {
+    @apply font-mono text-lg;
+  }
+}
